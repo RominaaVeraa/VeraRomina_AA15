@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Acumulador 3</title></head>
+<body>
+<script>
+let x = 1;
+let entre100y300 = 0;
+let masDe300 = 0;
+let total = 0;
+while (x <= 5) {
+  let s = parseFloat(prompt('Ingrese sueldo:'));
+  total = total + s;
+  if (s >= 100 && s <= 300) { entre100y300 = entre100y300 + 1; }
+  if (s > 300) { masDe300 = masDe300 + 1; }
+  x = x + 1;
+}
+document.write('Entre $100 y $300: ' + entre100y300 + '<br>');
+document.write('Más de $300: ' + masDe300 + '<br>');
+document.write('Total en sueldos: $' + total);
+</script>
+</body>
+</html>

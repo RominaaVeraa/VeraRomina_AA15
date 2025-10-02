@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>FORM/TEXT 1</title></head>
+<body>
+
+<form>
+  <p>Ingrese un entero: <input type="text" id="numero"></p>
+  <p><input type="button" value="Elevar al cubo" onClick="cubicar()"></p>
+</form>
+
+<script>
+function cubicar() {
+  let v = parseInt(document.getElementById('numero').value);
+  let r = v * v * v;
+  alert('Cubo: ' + r);
+}
+</script>
+
+</body>
+</html>

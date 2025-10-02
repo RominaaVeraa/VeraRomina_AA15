@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Select 4 - Examen</title></head>
+<body>
+
+<form>
+  <p>1) Capital de Argentina:
+    <select id="q1">
+      <option value="0">Córdoba</option>
+      <option value="1">Buenos Aires</option>
+      <option value="0">Rosario</option>
+    </select>
+  </p>
+  <p>2) 2 + 2 =
+    <select id="q2">
+      <option value="0">3</option>
+      <option value="1">4</option>
+      <option value="0">5</option>
+    </select>
+  </p>
+  <p>3) Planeta más cercano al Sol:
+    <select id="q3">
+      <option value="1">Mercurio</option>
+      <option value="0">Venus</option>
+      <option value="0">Marte</option>
+    </select>
+  </p>
+  <p>4) Lenguaje que corre en el navegador:
+    <select id="q4">
+      <option value="1">JavaScript</option>
+      <option value="0">SQL</option>
+      <option value="0">C</option>
+    </select>
+  </p>
+  <p><input type="button" value="Corregir" onClick="corregir()"></p>
+  <p>Correctas: <input type="text" id="ok"></p>
+  <p>Incorrectas: <input type="text" id="bad"></p>
+</form>
+
+<script>
+function corregir() {
+  let s1 = document.getElementById('q1');
+  let s2 = document.getElementById('q2');
+  let s3 = document.getElementById('q3');
+  let s4 = document.getElementById('q4');
+  let ok = 0;
+  if (s1.options[s1.selectedIndex].value === '1') ok++;
+  if (s2.options[s2.selectedIndex].value === '1') ok++;
+  if (s3.options[s3.selectedIndex].value === '1') ok++;
+  if (s4.options[s4.selectedIndex].value === '1') ok++;
+  document.getElementById('ok').value = ok;
+  document.getElementById('bad').value = 4 - ok;
+}
+</script>
+
+</body>
+</html>

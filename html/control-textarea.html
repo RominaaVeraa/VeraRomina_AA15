@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Control TEXTAREA - Libro de visitas</title>
+</head>
+<body>
+
+<form>
+  <p>Nombre: <input type="text" id="nombre"></p>
+  <p>Mail: <input type="text" id="mail"></p>
+  <p>Comentarios:</p>
+  <p><textarea id="comentarios" rows="8" cols="50"></textarea></p>
+  <p><input type="button" value="Enviar" onClick="mostrarDatos()"></p>
+</form>
+
+<script>
+function mostrarDatos() {
+  let nom = document.getElementById('nombre').value;
+  let correo = document.getElementById('mail').value;
+  let com = document.getElementById('comentarios').value;
+  alert('Nombre: ' + nom + '\nMail: ' + correo + '\nComentarios:\n' + com);
+}
+</script>
+
+</body>
+</html>

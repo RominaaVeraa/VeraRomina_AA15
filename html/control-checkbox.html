@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Control CHECKBOX - Deportes</title>
+</head>
+<body>
+
+<form>
+  <label><input type="checkbox" id="dep1"> Fútbol</label><br>
+  <label><input type="checkbox" id="dep2"> Básket</label><br>
+  <label><input type="checkbox" id="dep3"> Tenis</label><br><br>
+  <input type="button" value="Mostrar" onClick="mostrarDeportes()">
+</form>
+
+<script>
+function mostrarDeportes() {
+  let elegidos = [];
+  if (document.getElementById('dep1').checked) { elegidos.push('Fútbol'); }
+  if (document.getElementById('dep2').checked) { elegidos.push('Básket'); }
+  if (document.getElementById('dep3').checked) { elegidos.push('Tenis'); }
+  if (elegidos.length === 0) {
+    alert('No seleccionó deportes.');
+  } else {
+    alert('Eligió: ' + elegidos.join(', '));
+  }
+}
+</script>
+
+</body>
+</html>

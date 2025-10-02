@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Anidadas 5 - Sueldo y antigüedad</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Anidadas 5: Calcular sueldo a pagar</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const sueldo = Number(prompt("Ingrese el sueldo actual:"));
+    const antig = parseInt(prompt("Ingrese años de antigüedad:"), 10);
+
+    document.write("Sueldo: " + sueldo + "<br>");
+    document.write("Antigüedad (años): " + antig + "<br>");
+
+    let sueldoPagar = sueldo;
+
+    if (sueldo < 500) {
+      if (antig >= 10) {
+        sueldoPagar = sueldo * 1.20; // +20%
+        document.write("Aumento: 20% (sueldo < 500 y antigüedad ≥ 10)<br>");
+      } else {
+        sueldoPagar = sueldo * 1.05; // +5%
+        document.write("Aumento: 5% (sueldo < 500 y antigüedad < 10)<br>");
+      }
+    } else { 
+      document.write("Sin aumento (sueldo ≥ 500)<br>");
+    }
+
+    document.write("Sueldo a pagar: " + sueldoPagar);
+  </script>
+</body>
+</html>

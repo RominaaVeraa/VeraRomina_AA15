@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>FOR 2</title></head>
+<body>
+<script>
+let v = new Array(10);
+for (let i = 0; i < 10; i++) {
+  v[i] = parseFloat(prompt('Número ' + (i + 1) + ':'));
+}
+let suma = 0;
+for (let i = 5; i < 10; i++) {
+  suma = suma + v[i];
+}
+document.write('Suma de los últimos 5: ' + suma);
+</script>
+</body>
+</html>

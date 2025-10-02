@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Promedio de tres</title></head>
+<body>
+<script>
+// Función que recibe 3 enteros y RETORNA su promedio.
+// Igual que en tus ejemplos: calculamos y hacemos 'return'.
+function promedioDeTres(a, b, c) {
+  let suma = a + b + c;   // sumamos
+  let prom = suma / 3;    // dividimos por la cantidad de datos
+  return prom;            // retornamos UN valor
+}
+
+let a = parseInt(prompt("Ingrese A:"));
+let b = parseInt(prompt("Ingrese B:"));
+let c = parseInt(prompt("Ingrese C:"));
+let r = promedioDeTres(a, b, c);
+document.write("Promedio: " + r);
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>String 5</title></head>
+<body>
+<script>
+function tieneArroba(correo) {
+  return correo.indexOf('@') !== -1;
+}
+let mail = prompt('Ingrese una dirección de mail:');
+if (tieneArroba(mail)) {
+  document.write('El mail contiene @');
+} else {
+  document.write('El mail NO contiene @');
+}
+</script>
+</body>
+</html>

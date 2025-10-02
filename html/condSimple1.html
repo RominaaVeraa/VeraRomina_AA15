@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Condicional 1 - Promedio de 3 notas</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Condicional 1: Promedio y Promocionado</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const nota1 = parseInt(prompt("Ingrese primer nota:"), 10);
+    const nota2 = parseInt(prompt("Ingrese segunda nota:"), 10);
+    const nota3 = parseInt(prompt("Ingrese tercer nota:"), 10);
+
+    const suma = nota1 + nota2 + nota3;
+    const promedio = suma / 3;
+
+    document.write("Notas: " + nota1 + ", " + nota2 + ", " + nota3 + "<br>");
+    document.write("Suma: " + suma + "<br>");
+    document.write("Promedio: " + promedio + "<br>");
+
+    if (promedio >= 7) {
+      document.write("Resultado: Promocionado");
+    } else {
+      document.write("Resultado: No promocionado");
+    }
+  </script>
+</body>
+</html>

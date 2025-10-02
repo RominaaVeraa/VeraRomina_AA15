@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Suma de 5 valores</title></head>
+<body>
+<script>
+// Función que NO recibe parámetros: pide 5 valores con prompt
+// y RETORNA la suma total (misma dinámica de "calculo + return").
+function sumar5DesdeInput() {
+  let suma = 0;               // acumulador
+  let i = 1;                  // contador simple
+  while (i <= 5) {            // repetimos 5 veces
+    let v = parseFloat(prompt("Ingrese valor " + i + ":"));
+    if (!isNaN(v)) {          // si es numérico lo sumamos (defensa básica)
+      suma = suma + v;
+    }
+    i = i + 1;                // siguiente vuelta
+  }
+  return suma;                // devolvemos la suma total
+}
+
+// Llamamos y mostramos el valor RETORNADO
+let total = sumar5DesdeInput();
+document.write("Suma de los 5 valores: " + total);
+</script>
+</body>
+</html>

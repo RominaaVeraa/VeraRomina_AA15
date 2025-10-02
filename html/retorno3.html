@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Cantidad de dígitos</title></head>
+<body>
+<script>
+// Función que recibe un entero positivo y RETORNA cuántos dígitos tiene.
+// Usamos if/else por rangos para mantener la lógica simple y directa.
+function contarDigitos(n) {
+  if (n >= 1 && n <= 9) {
+    return 1;                 // 1 dígito
+  } else {
+    if (n <= 99) {
+      return 2;               // 2 dígitos
+    } else {
+      if (n <= 999) {
+        return 3;             // 3 dígitos
+      } else {
+        if (n <= 9999) {
+          return 4;           // 4 dígitos
+        } else {
+          if (n <= 99999) {
+            return 5;         // 5 dígitos
+          } else {
+            return -1;        // fuera de rango pedido (más de 5 dígitos)
+          }
+        }
+      }
+    }
+  }
+}
+
+let n = parseInt(prompt("Ingrese un entero positivo (hasta 5 dígitos):"));
+let r = contarDigitos(n);
+document.write("Cantidad de dígitos: " + r);
+</script>
+</body>
+</html>

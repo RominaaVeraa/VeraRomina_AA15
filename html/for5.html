@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>FOR 5</title></head>
+<body>
+<script>
+let cEq = 0, cIso = 0, cEsc = 0;
+for (let i = 1; i <= 4; i++) {
+  let a = parseFloat(prompt('T' + i + ' - lado A:'));
+  let b = parseFloat(prompt('T' + i + ' - lado B:'));
+  let c = parseFloat(prompt('T' + i + ' - lado C:'));
+  let tipo;
+  if (a === b && b === c) { tipo = 'equilátero'; cEq++; }
+  else if (a === b || a === c || b === c) { tipo = 'isósceles'; cIso++; }
+  else { tipo = 'escaleno'; cEsc++; }
+  document.write('Triángulo ' + i + ': ' + tipo + '<br>');
+}
+document.write('Equiláteros: ' + cEq + ', Isósceles: ' + cIso + ', Escalenos: ' + cEsc + '<br>');
+let min = cEq; let tipos = 'equilátero';
+if (cIso < min) { min = cIso; tipos = 'isósceles'; }
+else if (cIso === min) { tipos = tipos + ' y isósceles'; }
+if (cEsc < min) { min = cEsc; tipos = 'escaleno'; }
+else if (cEsc === min) { tipos = tipos + ' y escaleno'; }
+document.write('Tipo con menor cantidad: ' + tipos);
+</script>
+</body>
+</html>

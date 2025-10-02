@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Condicional compuesta 2</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Compuesta 2: Promedio de 3 notas</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const n1 = parseInt(prompt("Ingrese primera nota:"), 10);
+    const n2 = parseInt(prompt("Ingrese segunda nota:"), 10);
+    const n3 = parseInt(prompt("Ingrese tercera nota:"), 10);
+
+    const promedio = (n1 + n2 + n3) / 3;
+
+    document.write("Notas: " + n1 + ", " + n2 + ", " + n3 + "<br>");
+    document.write("Promedio: " + promedio + "<br>");
+
+    if (promedio >= 4) {
+      document.write("Resultado: regular");
+    } else {
+      document.write("Resultado: reprobado");
+    }
+  </script>
+</body>
+</html>

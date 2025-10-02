@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>FOR 7</title></head>
+<body>
+<script>
+let neg = 0, pos = 0, mult15 = 0, sumaPares = 0;
+for (let i = 1; i <= 10; i++) {
+  let v = parseInt(prompt('Ingrese entero ' + i + ':'));
+  if (v < 0) neg++; else if (v > 0) pos++;
+  if (v % 15 === 0) mult15++;
+  if (v % 2 === 0) sumaPares = sumaPares + v;
+}
+document.write('Negativos: ' + neg + '<br>');
+document.write('Positivos: ' + pos + '<br>');
+document.write('Múltiplos de 15: ' + mult15 + '<br>');
+document.write('Suma de pares: ' + sumaPares);
+</script>
+</body>
+</html>

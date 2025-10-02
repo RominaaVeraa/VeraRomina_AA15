@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Condicional compuesta 3</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Compuesta 3: Uno o dos dígitos</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const num = parseInt(prompt("Ingrese un número positivo de uno o dos dígitos (1..99):"), 10);
+
+    document.write("Número ingresado: " + num + "<br>");
+
+    if (num >= 10 && num <= 99) {
+      document.write("Resultado: tiene dos dígitos");
+    } else if (num >= 1 && num <= 9) {
+      document.write("Resultado: tiene un dígito");
+    } else {
+      document.write("Valor fuera de rango (debe ser 1..99)");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>do-while 3</title></head>
+<body>
+<script>
+let total = 0;
+let varones = 0;
+let mujeres = 0;
+let varones16a65 = 0;
+let doc;
+do {
+  doc = parseInt(prompt('Documento (0 para finalizar):'));
+  if (doc !== 0) {
+    let edad = parseInt(prompt('Edad:'));
+    let sexo = prompt("Sexo ('femenino' o 'masculino'):");
+    total = total + 1;
+    if (sexo === 'masculino') {
+      varones = varones + 1;
+      if (edad >= 16 && edad <= 65) { varones16a65 = varones16a65 + 1; }
+    } else {
+      mujeres = mujeres + 1;
+    }
+  }
+} while (doc !== 0);
+document.write('Total de personas: ' + total + '<br>');
+document.write('Varones: ' + varones + '<br>');
+document.write('Mujeres: ' + mujeres + '<br>');
+document.write('Varones entre 16 y 65 años: ' + varones16a65);
+</script>
+</body>
+</html>

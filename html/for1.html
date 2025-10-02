@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>FOR 1</title></head>
+<body>
+<script>
+let mayores12 = 0;
+for (let i = 1; i <= 3; i++) {
+  let base = parseFloat(prompt('Triángulo ' + i + ' - base:'));
+  let altura = parseFloat(prompt('Triángulo ' + i + ' - altura:'));
+  let area = (base * altura) / 2;
+  document.write('Triángulo ' + i + ': base=' + base + ', altura=' + altura + ', área=' + area + '<br>');
+  if (area > 12) { mayores12++; }
+}
+document.write('Cantidad con área > 12: ' + mayores12);
+</script>
+</body>
+</html>

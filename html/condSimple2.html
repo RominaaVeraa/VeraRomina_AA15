@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Condicional 2 - Comparar claves</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Condicional 2: Ingresar clave dos veces</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const clave1 = prompt("Ingresá la clave:");
+    const clave2 = prompt("Repetí la clave:");
+
+    document.write("Primera clave: " + (clave1 ?? "") + "<br>");
+    document.write("Segunda clave: " + (clave2 ?? "") + "<br>");
+
+    if (clave1 == clave2) {
+      document.write("Resultado: Las claves son iguales");
+    } else {
+      document.write("Resultado: Las claves no coinciden");
+    }
+  </script>
+</body>
+</html>

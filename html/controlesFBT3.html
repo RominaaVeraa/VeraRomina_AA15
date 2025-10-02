@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>FORM/TEXT 3</title></head>
+<body>
+
+<form>
+  <p>Nombre: <input type="text" id="nombre"></p>
+  <p>Apellido: <input type="text" id="apellido"></p>
+  <p>Nombre completo: <input type="text" id="completo"></p>
+  <p><input type="button" value="Concatenar" onClick="concatenar()"></p>
+</form>
+
+<script>
+function concatenar() {
+  let nom = document.getElementById('nombre').value;
+  let ape = document.getElementById('apellido').value;
+  document.getElementById('completo').value = nom + ' ' + ape;
+}
+</script>
+
+</body>
+</html>

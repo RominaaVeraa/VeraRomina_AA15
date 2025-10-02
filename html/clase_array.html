@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Array 1 - Vector de 8</title>
+</head>
+<body>
+
+<script>
+  // Carga el vector pidiendo 8 valores enteros
+  function cargar(vec) {
+    for (let f = 0; f < vec.length; f++) {
+      let v = prompt('Ingrese valor ' + (f + 1) + ':');
+      vec[f] = parseInt(v);
+    }
+  }
+
+  // Calcula e informa:
+  // a) suma total
+  // b) suma de los valores > 36
+  // c) cantidad de valores > 50
+  function informar(vec) {
+    let sumaTotal = 0;
+    let sumaMayores36 = 0;
+    let cantidadMayores50 = 0;
+
+    for (let f = 0; f < vec.length; f++) {
+      let x = vec[f];
+      sumaTotal = sumaTotal + x;         // acumulo todo
+      if (x > 36) {
+        sumaMayores36 = sumaMayores36 + x; // acumulo solo los > 36
+      }
+      if (x > 50) {
+        cantidadMayores50 = cantidadMayores50 + 1; // cuento > 50
+      }
+    }
+
+    document.write('Listado de valores:<br>');
+    for (let f = 0; f < vec.length; f++) {
+      document.write(vec[f] + '<br>');
+    }
+    document.write('Suma total: ' + sumaTotal + '<br>');
+    document.write('Suma de valores > 36: ' + sumaMayores36 + '<br>');
+    document.write('Cantidad de valores > 50: ' + cantidadMayores50 + '<br>');
+  }
+
+  // --- Programa principal ---
+  let v = new Array(8);  // vector de 8 elementos
+  cargar(v);             // ingreso por teclado
+  informar(v);           // muestro resultados
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Switch - Traductor simple</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Estructura switch: Traducir (casa, mesa, perro, gato)</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const palabra = (prompt("Ingresá una palabra (casa, mesa, perro, gato):") || "").toLowerCase();
+    let traduccion;
+
+    switch (palabra) {
+      case "casa":  traduccion = "house"; break;
+      case "mesa":  traduccion = "table"; break;
+      case "perro": traduccion = "dog";   break;
+      case "gato":  traduccion = "cat";   break;
+      default: traduccion = "Palabra no válida (usa casa/mesa/perro/gato)";
+    }
+
+    document.write("Palabra: " + palabra + "<br>");
+    document.write("Traducción: " + traduccion);
+  </script>
+</body>
+</html>

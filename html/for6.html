@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>FOR 6</title></head>
+<body>
+<script>
+let n = parseInt(prompt('Cantidad de puntos a procesar:'));
+let q1 = 0, q2 = 0, q3 = 0, q4 = 0;
+for (let i = 1; i <= n; i++) {
+  let x = parseFloat(prompt('Punto ' + i + ' - x:'));
+  let y = parseFloat(prompt('Punto ' + i + ' - y:'));
+  if (x > 0 && y > 0) q1++;
+  else if (x < 0 && y > 0) q2++;
+  else if (x < 0 && y < 0) q3++;
+  else if (x > 0 && y < 0) q4++;
+}
+document.write('I: ' + q1 + ', II: ' + q2 + ', III: ' + q3 + ', IV: ' + q4);
+</script>
+</body>
+</html>

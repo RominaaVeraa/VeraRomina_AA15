@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Condicional compuesta 1</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Compuesta 1: Operaciones según el mayor</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const n1 = Number(prompt("Ingrese el primer número:"));
+    const n2 = Number(prompt("Ingrese el segundo número:"));
+
+    document.write("Primer número: " + n1 + "<br>");
+    document.write("Segundo número: " + n2 + "<br>");
+
+    if (n1 > n2) {
+      const suma = n1 + n2;
+      const diferencia = n1 - n2;
+      document.write("Suma: " + suma + "<br>");
+      document.write("Diferencia (n1 - n2): " + diferencia);
+    } else {
+      const producto = n1 * n2;
+      document.write("Producto: " + producto + "<br>");
+      if (n2 !== 0) {
+        const division = n1 / n2;
+        document.write("División (n1 / n2): " + division);
+      } else {
+        document.write("División (n1 / n2): no definida (división por 0)");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Anidadas 4 - Cuadrantes</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Anidadas 4: Ubicar punto en el plano</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const x = parseInt(prompt("Ingrese x (entero):"), 10);
+    const y = parseInt(prompt("Ingrese y (entero):"), 10);
+
+    document.write("Punto: (" + x + ", " + y + ")<br>");
+
+    if (x === 0 && y === 0) {
+      document.write("Ubicación: Origen");
+    } else if (x === 0) {
+      document.write("Ubicación: Eje Y");
+    } else if (y === 0) {
+      document.write("Ubicación: Eje X");
+    } else if (x > 0 && y > 0) {
+      document.write("Ubicación: 1° Cuadrante (x>0, y>0)");
+    } else if (x < 0 && y > 0) {
+      document.write("Ubicación: 2° Cuadrante (x<0, y>0)");
+    } else if (x < 0 && y < 0) {
+      document.write("Ubicación: 3° Cuadrante (x<0, y<0)");
+    } else {
+      document.write("Ubicación: 4° Cuadrante (x>0, y<0)");
+    }
+  </script>
+</body>
+</html>

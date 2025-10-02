@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Perímetro de cuadrado</title></head>
+<body>
+<script>
+// Función que recibe el lado y RETORNA el perímetro.
+// Misma lógica de tus ejemplos: cálculo simple y 'return'.
+function perimetroCuadrado(lado) {
+  let p = 4 * lado;  // calculamos
+  return p;          // retornamos el resultado
+}
+
+let lado = parseFloat(prompt("Ingrese el lado:"));
+let per = perimetroCuadrado(lado);
+document.write("Perímetro: " + per);
+</script>
+</body>
+</html>

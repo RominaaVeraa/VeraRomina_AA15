@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Con parámetros - Ordenar tres</title>
+</head>
+<body>
+<script>
+
+function mostrarOrdenadosAsc(a, b, c) {
+
+  const numeros = [a, b, c];
+
+  numeros.sort((x, y) => x - y);
+
+  document.write("Ordenados: " + numeros.join(", "));
+}
+
+
+const a = parseInt(prompt("Ingrese el primer entero:"));
+const b = parseInt(prompt("Ingrese el segundo entero:"));
+const c = parseInt(prompt("Ingrese el tercer entero:"));
+
+mostrarOrdenadosAsc(a, b, c);
+</script>
+</body>
+</html>

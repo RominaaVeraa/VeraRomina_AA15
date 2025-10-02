@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>FORM/TEXT 2</title></head>
+<body>
+
+<form>
+  <p>Valor 1: <input type="text" id="n1"></p>
+  <p>Valor 2: <input type="text" id="n2"></p>
+  <p><input type="button" value="Mostrar mayor" onClick="mayor()"></p>
+</form>
+
+<script>
+function mayor() {
+  let a = parseFloat(document.getElementById('n1').value);
+  let b = parseFloat(document.getElementById('n2').value);
+  if (a > b) { alert('Mayor: ' + a); }
+  else if (b > a) { alert('Mayor: ' + b); }
+  else { alert('Son iguales: ' + a); }
+}
+</script>
+
+</body>
+</html>

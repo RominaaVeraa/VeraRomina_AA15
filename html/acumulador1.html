@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Acumulador 1</title></head>
+<body>
+<script>
+let x = 1;
+let mayIgual7 = 0;
+let menor7 = 0;
+while (x <= 10) {
+  let nota = parseInt(prompt('Ingrese nota:'));
+  if (nota >= 7) { mayIgual7 = mayIgual7 + 1; } else { menor7 = menor7 + 1; }
+  x = x + 1;
+}
+document.write('Notas ≥ 7: ' + mayIgual7 + '<br>');
+document.write('Notas < 7: ' + menor7);
+</script>
+</body>
+</html>

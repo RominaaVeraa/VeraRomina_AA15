@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Select 3 - Importe Pizza</title></head>
+<body>
+
+<form>
+  <p>
+    Pizza:
+    <select id="tipo">
+      <option value="4">Queso - $4</option>
+      <option value="6">Jamón y queso - $6</option>
+      <option value="10">Especial - $10</option>
+    </select>
+  </p>
+  <p>Cantidad: <input type="text" id="cant"></p>
+  <p><input type="button" value="Calcular" onClick="importe()"></p>
+  <p>Importe: $ <input type="text" id="pagar"></p>
+</form>
+
+<script>
+function importe() {
+  let s = document.getElementById('tipo');
+  let precio = parseFloat(s.options[s.selectedIndex].value);
+  let c = parseInt(document.getElementById('cant').value);
+  let total = precio * c;
+  document.getElementById('pagar').value = total;
+}
+</script>
+
+</body>
+</html>

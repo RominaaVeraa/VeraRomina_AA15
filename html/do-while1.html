@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>do-while 1</title></head>
+<body>
+<script>
+let suma = 0;
+let valor;
+do {
+  valor = parseFloat(prompt('Ingrese un valor (9999 para finalizar):'));
+  if (valor !== 9999) { suma = suma + valor; }
+} while (valor !== 9999);
+document.write('Valor acumulado: ' + suma + '<br>');
+if (suma === 0) { document.write('El valor es cero'); }
+else if (suma > 0) { document.write('El valor es mayor a cero'); }
+else { document.write('El valor es menor a cero'); }
+</script>
+</body>
+</html>

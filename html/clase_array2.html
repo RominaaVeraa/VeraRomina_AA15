@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Array 2 - Suma de dos vectores</title>
+</head>
+<body>
+
+<script>
+  // Carga un vector del tamaño dado
+  function cargar(vec, nombre) {
+    for (let f = 0; f < vec.length; f++) {
+      let v = prompt('Ingrese ' + nombre + '[' + (f + 1) + ']:');
+      vec[f] = parseFloat(v);
+    }
+  }
+
+  // Suma componente a componente y devuelve un tercer vector
+  function sumarComponentes(a, b) {
+    let c = new Array(a.length);      // mismo tamaño
+    for (let f = 0; f < a.length; f++) {
+      c[f] = a[f] + b[f];             // suma por posición
+    }
+    return c;                          // retorna el vector resultado
+  }
+
+  // Muestra un vector con un título
+  function mostrar(vec, titulo) {
+    document.write(titulo + '<br>');
+    for (let f = 0; f < vec.length; f++) {
+      document.write(vec[f] + '<br>');
+    }
+    document.write('<br>');
+  }
+
+  // --- Programa principal ---
+  // El usuario elige el tamaño
+  let tam = parseInt(prompt('Ingrese tamaño del vector:'));
+  let v1 = new Array(tam);
+  let v2 = new Array(tam);
+
+  cargar(v1, 'v1');       // cargo primer vector
+  cargar(v2, 'v2');       // cargo segundo vector
+
+  let v3 = sumarComponentes(v1, v2); // suma componente a componente
+
+  // Muestro los tres vectores (opcionalmente sólo el resultado)
+  mostrar(v1, 'Vector 1:');
+  mostrar(v2, 'Vector 2:');
+  mostrar(v3, 'Suma (v1 + v2):');
+</script>
+
+</body>
+</html>

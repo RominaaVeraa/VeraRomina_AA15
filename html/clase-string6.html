@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>String 6</title></head>
+<body>
+<script>
+let cad = prompt('Ingrese un string:');
+let mitad = cad.substring(0, Math.floor(cad.length/2));
+let ultimo = cad.charAt(cad.length-1);
+let inversa = cad.split('').reverse().join('');
+let conGuion = cad.split('').join('-');
+let vocales = 0;
+for (let i=0;i<cad.length;i++) {
+  let c = cad.charAt(i).toLowerCase();
+  if ('aeiouáéíóúü'.indexOf(c) !== -1) vocales++;
+}
+document.write('Primera mitad: ' + mitad + '<br>');
+document.write('Último carácter: ' + ultimo + '<br>');
+document.write('En forma inversa: ' + inversa + '<br>');
+document.write('Separado con guión: ' + conGuion + '<br>');
+document.write('Cantidad de vocales: ' + vocales);
+</script>
+</body>
+</html>

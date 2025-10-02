@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>String 4</title></head>
+<body>
+<script>
+let s = prompt('Ingrese una palabra o texto:');
+let limpio = s.toLowerCase().replace(/\s+/g,'');
+let inverso = limpio.split('').reverse().join('');
+if (limpio === inverso) {
+  document.write('Es palíndromo');
+} else {
+  document.write('No es palíndromo');
+}
+</script>
+</body>
+</html>

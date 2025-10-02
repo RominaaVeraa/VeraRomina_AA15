@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Select 1 - Pizzas</title></head>
+<body>
+
+<form>
+  <p>
+    <select id="pizza" onChange="mostrarPrecio()">
+      <option value="1200">Jamón y Queso</option>
+      <option value="1000">Muzzarella</option>
+      <option value="1400">Morrones</option>
+    </select>
+  </p>
+  <p>Precio: $ <input type="text" id="precio"></p>
+</form>
+
+<script>
+function mostrarPrecio() {
+  let s = document.getElementById('pizza');
+  document.getElementById('precio').value = s.options[s.selectedIndex].value;
+}
+</script>
+
+</body>
+</html>

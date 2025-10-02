@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Anidadas 3 - Menores a 10</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Anidadas 3: ¿Todos los números son menores a 10?</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const a = Number(prompt("1° número:"));
+    const b = Number(prompt("2° número:"));
+    const c = Number(prompt("3° número:"));
+
+    document.write("Números: " + a + ", " + b + ", " + c + "<br>");
+
+    if (a < 10 && b < 10 && c < 10) {
+      document.write("Todos los números son menores a diez.");
+    } else {
+      document.write("Hay algún número mayor o igual a diez.");
+    }
+  </script>
+</body>
+</html>

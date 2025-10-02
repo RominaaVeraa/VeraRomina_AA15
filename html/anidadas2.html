@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Anidadas 2 - Todos iguales</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Anidadas 2: Operación si los 3 valores son iguales</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const n1 = Number(prompt("Ingrese el 1° valor:"));
+    const n2 = Number(prompt("Ingrese el 2° valor:"));
+    const n3 = Number(prompt("Ingrese el 3° valor:"));
+
+    document.write("Valores: " + n1 + ", " + n2 + ", " + n3 + "<br>");
+
+    if (n1 === n2 && n2 === n3) {
+      const suma12 = n1 + n2;
+      const resultado = suma12 * n3;
+      document.write("Suma (1°+2°): " + suma12 + "<br>");
+      document.write("Resultado (suma × 3°): " + resultado);
+    } else {
+      document.write("No son todos iguales (no se aplica la operación).");
+    }
+  </script>
+</body>
+</html>

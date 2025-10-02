@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>String 3</title></head>
+<body>
+<script>
+let fuente = prompt('Ingrese el texto fuente:');
+let clave = prompt('Ingrese la clave a buscar:');
+let pos = fuente.indexOf(clave);
+if (pos !== -1) {
+  document.write('Encontrada en la posición: ' + pos);
+} else {
+  document.write('La clave no está en el texto.');
+}
+</script>
+</body>
+</html>

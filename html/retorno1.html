@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Mayor de tres</title></head>
+<body>
+<script>
+
+function mayorDeTres(a, b, c) {
+  let mayor = a;        // suponemos que 'a' es el mayor
+  if (b > mayor) {      // si 'b' es más grande que el actual
+    mayor = b;          // ahora 'b' pasa a ser el mayor
+  }
+  if (c > mayor) {      // comparamos 'c' con el mayor actual
+    mayor = c;          // si 'c' es más grande, lo guardamos
+  }
+  return mayor;         
+}
+
+let x = parseInt(prompt("Ingrese A:"));
+let y = parseInt(prompt("Ingrese B:"));
+let z = parseInt(prompt("Ingrese C:"));
+
+let r = mayorDeTres(x, y, z);
+document.write("Mayor: " + r);
+</script>
+</body>
+</html>

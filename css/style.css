@@ -1,0 +1,115 @@
+:root {
+  --bg: #f9f1f9;
+  --text: #000000;
+  --accent: #8f3bf6;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: system-ui, -apple-system, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container { 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 2rem 1rem; 
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 { 
+  font-size: 2rem; 
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #64748b;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+section {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h2 { 
+  font-size: 1.3rem; 
+  margin-bottom: 1rem;
+  color: var(--text);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+ol, ul { 
+  list-style: none;
+  counter-reset: item;
+}
+
+ol li, ul li {
+  margin-bottom: 0.75rem;
+  counter-increment: item;
+  position: relative;
+  padding-left: 2rem;
+}
+
+ol li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.activity-description {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+a { 
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover { 
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #d55cf6;
+}
+
+/* Para páginas individuales */
+body.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+body.container hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 1rem 0;
+}

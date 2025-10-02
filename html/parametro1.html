@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Con parámetros - Menor de tres</title>
+    </head>
+    <body>
+        <script>
+
+        function mostrarMenorDeTres(a, b, c) {
+
+        const menor = Math.min(a, b, c);
+
+        document.write("Menor: " + menor);
+        }
+
+        const n1 = parseInt(prompt("Ingrese el primer entero:"));
+        const n2 = parseInt(prompt("Ingrese el segundo entero:"));
+        const n3 = parseInt(prompt("Ingrese el tercer entero:"));
+
+        mostrarMenorDeTres(n1, n2, n3);
+        </script>
+    </body>
+</html>

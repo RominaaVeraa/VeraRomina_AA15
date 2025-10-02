@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>String 2</title></head>
+<body>
+<script>
+let count = 0;
+let nom;
+do {
+  nom = prompt('Ingrese un nombre (fin para terminar):');
+  if (nom !== null && nom.toLowerCase() !== 'fin') { count++; }
+} while (nom !== null && nom.toLowerCase() !== 'fin');
+document.write('Cantidad de nombres: ' + count);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Anidadas 1 - Fecha: Navidad</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+  <h1>Anidadas 1: Verificar si la fecha es Navidad</h1>
+  <hr style="margin: .75rem 0;">
+
+  <script type="text/javascript">
+    const dia  = parseInt(prompt("Ingrese el día:"), 10);
+    const mes  = parseInt(prompt("Ingrese el mes:"), 10);
+    const anio = parseInt(prompt("Ingrese el año:"), 10);
+
+    document.write("Fecha ingresada: " + dia + "/" + mes + "/" + anio + "<br>");
+
+    if (dia === 25 && mes === 12) {
+      document.write("Resultado: Es Navidad 🎄");
+    } else {
+      document.write("Resultado: No es Navidad");
+    }
+  </script>
+</body>
+</html>

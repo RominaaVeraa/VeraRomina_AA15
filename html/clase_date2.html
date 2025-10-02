@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Clase Date - Formato de fecha</title>
+</head>
+<body>
+<script>
+  // Función que recibe un objeto Date y retorna el texto pedido.
+  function formatearHoy(fecha) {
+    // Obtenemos el día de la semana (0=Domingo..6=Sábado)
+    let diaSemana = fecha.getDay();
+    // Traducimos el número de día a nombre en castellano con switch
+    let nombreDia;
+    switch (diaSemana) {
+      case 0: nombreDia = 'Domingo'; break;
+      case 1: nombreDia = 'Lunes'; break;
+      case 2: nombreDia = 'Martes'; break;
+      case 3: nombreDia = 'Miércoles'; break;
+      case 4: nombreDia = 'Jueves'; break;
+      case 5: nombreDia = 'Viernes'; break;
+      case 6: nombreDia = 'Sábado'; break;
+    }
+
+    // Comenzamos a armar el string, igual que en tu ejemplo
+    let s = 'Hoy es ' + nombreDia + ' ' + fecha.getDate() + ' de ';
+
+    // getMonth() 0..11 -> traducimos a nombre del mes con switch
+    switch (fecha.getMonth()) {
+      case 0:  s = s + 'Enero '; break;
+      case 1:  s = s + 'Febrero '; break;
+      case 2:  s = s + 'Marzo '; break;
+      case 3:  s = s + 'Abril '; break;
+      case 4:  s = s + 'Mayo '; break;
+      case 5:  s = s + 'Junio '; break;
+      case 6:  s = s + 'Julio '; break;
+      case 7:  s = s + 'Agosto '; break;
+      case 8:  s = s + 'Septiembre '; break;
+      case 9:  s = s + 'Octubre '; break;
+      case 10: s = s + 'Noviembre '; break;
+      case 11: s = s + 'Diciembre '; break;
+    } // fin switch mes
+
+    // Añadimos el año y retornamos
+    s = s + 'de ' + fecha.getFullYear();
+    return s;
+  }
+
+  // Llamada a la función con la fecha actual
+  let hoy = new Date();
+  document.write(formatearHoy(hoy));
+</script>
+</body>
+</html>
